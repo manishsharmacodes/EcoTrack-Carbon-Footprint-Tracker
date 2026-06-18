@@ -1,0 +1,126 @@
+/* ===== Notifications ===== */
+
+.notif-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .notif-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}
+
+.notifications-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.notifications-feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.notification-item {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  align-items: center;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.notification-item.unread {
+  background: hsla(152, 68%, 48%, 0.05);
+  border-left: 4px solid var(--primary-light);
+  cursor: pointer;
+}
+
+.notification-item.unread:hover {
+  background: hsla(152, 68%, 48%, 0.08);
+}
+
+.notification-item.read {
+  border-left: 4px solid transparent;
+  opacity: 0.8;
+}
+
+.notif-item-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notif-type-icon {
+  width: 40px;
+  height: 40px;
+  padding: var(--space-sm);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-tip {
+  background: hsla(200, 80%, 55%, 0.12);
+  color: var(--info);
+}
+
+.type-achievement {
+  background: hsla(45, 93%, 58%, 0.12);
+  color: var(--accent);
+}
+
+.type-milestone {
+  background: hsla(152, 68%, 48%, 0.12);
+  color: var(--primary-light);
+}
+
+.type-reminder {
+  background: hsla(0, 72%, 56%, 0.12);
+  color: var(--danger);
+}
+
+.notif-item-body {
+  flex: 1;
+}
+
+.notif-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-md);
+}
+
+.notif-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.notif-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.notif-message {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.notif-unread-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--primary-light);
+  flex-shrink: 0;
+}

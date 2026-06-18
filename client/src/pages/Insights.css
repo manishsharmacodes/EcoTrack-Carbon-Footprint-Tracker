@@ -1,0 +1,220 @@
+/* ===== Insights Page ===== */
+
+.savings-highlight {
+  padding: var(--space-lg) var(--space-xl);
+  background: linear-gradient(135deg, hsla(152, 68%, 38%, 0.15), hsla(200, 80%, 55%, 0.1));
+  border: 1px solid hsla(152, 68%, 48%, 0.2);
+  margin-bottom: var(--space-xl);
+}
+
+.savings-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.savings-sparkle {
+  color: var(--accent);
+  animation: pulse 2s infinite;
+  display: flex;
+}
+
+.savings-highlight h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.savings-highlight p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.insights-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .insights-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.insights-tabs {
+  display: flex;
+  gap: var(--space-xs);
+  background: var(--bg-surface);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+  border: 1px solid var(--glass-border);
+}
+
+.insights-tab {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.insights-tab.active {
+  background: var(--bg-elevated);
+  color: var(--primary-light);
+  border: 1px solid var(--glass-border);
+}
+
+.insights-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.insight-card {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  align-items: flex-start;
+  transition: all var(--transition-base);
+}
+
+.insight-card:hover {
+  transform: translateY(-2px);
+}
+
+.insight-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: var(--glass-shadow);
+}
+
+.insight-card-body {
+  flex: 1;
+}
+
+.insight-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.badge-cat {
+  background: var(--bg-input);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--glass-border);
+}
+
+.insight-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.insight-card-msg {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.insight-potential-savings {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: var(--space-md);
+  font-size: 0.8rem;
+  color: var(--primary-light);
+  background: hsla(152, 68%, 48%, 0.1);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* Insight Card Custom Types */
+.insight-achievement {
+  border-left: 4px solid var(--success);
+}
+.insight-warning {
+  border-left: 4px solid var(--danger);
+}
+.insight-suggestion {
+  border-left: 4px solid var(--info);
+}
+.insight-info {
+  border-left: 4px solid var(--text-muted);
+}
+
+/* Sidebar Tips */
+.daily-tips-card {
+  padding: var(--space-lg);
+}
+
+.daily-tips-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: var(--space-sm);
+}
+
+.sidebar-tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.sidebar-tip-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.tip-header-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.tip-card-icon {
+  font-size: 1.15rem;
+}
+
+.sidebar-tip-item h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tip-card-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  padding-left: var(--space-lg);
+}
+
+.insights-skeleton-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
