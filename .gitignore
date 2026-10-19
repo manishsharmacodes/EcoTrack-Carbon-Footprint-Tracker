@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+.env.local
+.netlify/*
+!.netlify/results.md
+.DS_Store
+*.log

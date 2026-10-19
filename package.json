@@ -1,16 +1,22 @@
 {
   "name": "ecotrack",
   "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "description": "Carbon footprint tracking application",
   "scripts": {
-    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd server && npm run dev",
-    "client": "cd client && npm run dev",
-    "build": "cd client && npm run build",
-    "start": "cd server && npm start"
+    "dev": "netlify dev",
+    "build": "npm --prefix client ci && npm --prefix client run build",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@netlify/database": "^2.0.1",
+    "@netlify/functions": "^6.0.2",
+    "bcryptjs": "^3.0.3",
+    "drizzle-orm": "^1.0.0-beta.22",
+    "jsonwebtoken": "^9.0.3"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "drizzle-kit": "^1.0.0-beta.22"
   }
 }

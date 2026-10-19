@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "client/dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[dev]
+  command = "npm --prefix client run dev"
+  targetPort = 5173
+  port = 8889
+
+# Single-page app: let React Router handle every non-API, non-file path
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
